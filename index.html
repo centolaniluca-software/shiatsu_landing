@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Shiatsu | Tensioni + Sonno | Luca Centolani</title>
+  <meta name="description" content="Trattamento Shiatsu per tensioni corporee, stress e sonno leggero. Approccio graduale e personalizzato. Solarolo (RA).">
+
+  <!-- Meta Pixel (stesso pixel) -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+
+    fbq('init', '220009700640058');
+    fbq('track', 'PageView');
+    /* evento per distinguere la landing */
+    fbq('trackCustom', 'View_Landing_Shiatsu');
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=220009700640058&ev=PageView&noscript=1"/>
+  </noscript>
+</head>
+
+<body>
+
+<div id="lc-shiatsu">
+  <style>
+    /* base */
+    #lc-shiatsu{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:#0b1220}
+    #lc-shiatsu{background:#F3EDE3;}
+    #lc-shiatsu *{box-sizing:border-box}
+    #lc-shiatsu a{color:inherit;text-decoration:none}
+    #lc-shiatsu .wrap{max-width:1060px;margin:0 auto;padding:0 16px}
+    #lc-shiatsu .muted{color:rgba(11,18,32,.70)}
+    #lc-shiatsu .small{font-size:13px;line-height:1.45}
+    #lc-shiatsu .hr{height:1px;background:rgba(11,18,32,.08);margin:14px 0}
+
+    /* palette più “shiatsu”: profonda, calda, meno “tech” */
+    #lc-shiatsu .hero{
+      position:relative; overflow:hidden; border-radius:22px;
+      background:
+        radial-gradient(860px 520px at 18% 0%, rgba(146, 212, 193, .42), transparent 60%),
+        radial-gradient(780px 540px at 88% 30%, rgba(180, 146, 110, .28), transparent 62%),
+        linear-gradient(135deg,#0b1a20,#0f2a2b);
+      color:#fff; box-shadow:0 18px 60px rgba(0,0,0,.26);
+      padding:22px 0 18px;
+    }
+    #lc-shiatsu h1{
+      margin:0 0 10px; line-height:1.05; letter-spacing:-.9px;
+      font-size:clamp(26px, 7.5vw, 46px);
+    }
+    #lc-shiatsu .sub{
+      margin:0 0 14px; color:rgba(255,255,255,.86);
+      font-size:clamp(14px, 4.2vw, 16.5px);
+      line-height:1.45; max-width:62ch;
+    }
+    #lc-shiatsu .ctaRow{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:10px}
+    #lc-shiatsu .btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:10px;
+      padding:14px 16px;border-radius:16px;font-weight:850;font-size:15px;
+      min-height:48px; user-select:none;
+      transition:transform .12s ease,filter .12s ease;
+      cursor:pointer;
+    }
+    #lc-shiatsu .btn:hover{transform:translateY(-1px);filter:brightness(1.04)}
+    #lc-shiatsu .btnPrimary{
+      background:linear-gradient(135deg, rgba(146,212,193,.98), rgba(180,146,110,.88));
+      color:#0b1a20;border:0;box-shadow:0 10px 25px rgba(180,146,110,.18);
+      flex:1 1 260px;
+    }
+    #lc-shiatsu .btnGhost{
+      background:rgba(255,255,255,.08);
+      border:1px solid rgba(255,255,255,.16);
+      color:rgba(255,255,255,.92);
+      flex:1 1 160px;
+    }
+    #lc-shiatsu .micro{margin-top:10px;color:rgba(255,255,255,.74);font-size:13px;line-height:1.4}
+    #lc-shiatsu .ctaNote{
+      margin-top:10px;color:rgba(255,255,255,.80);font-size:13px;line-height:1.45;max-width:66ch;
+    }
+    #lc-shiatsu .ctaNote strong{color:rgba(255,255,255,.92)}
+    #lc-shiatsu .ctaPerm{margin-top:6px;color:rgba(255,255,255,.78);font-size:13px;line-height:1.4}
+    #lc-shiatsu .heroAlt{
+      margin-top:10px;font-size:13px;color:rgba(255,255,255,.70);
+    }
+    #lc-shiatsu .heroAlt a{
+      text-decoration:underline;text-underline-offset:3px;color:rgba(255,255,255,.85);
+    }
+
+    #lc-shiatsu .section{padding:22px 0}
+    #lc-shiatsu .secTitle{margin:0 0 10px;letter-spacing:-.35px;font-size:clamp(18px, 5.2vw, 26px)}
+    #lc-shiatsu .grid{display:grid;gap:12px;grid-template-columns:1fr;}
+    #lc-shiatsu .card{
+      border-radius:18px;padding:16px;background:#fff;
+      border:1px solid rgba(11,18,32,.10);
+      box-shadow:0 10px 30px rgba(11,18,32,.06);
+    }
+    #lc-shiatsu .icon{
+      width:40px;height:40px;border-radius:14px;
+      display:flex;align-items:center;justify-content:center;
+      background:linear-gradient(135deg, rgba(146,212,193,.18), rgba(180,146,110,.16));
+      border:1px solid rgba(11,18,32,.08);
+      font-size:18px;
+    }
+    #lc-shiatsu .card h3{margin:10px 0 6px;font-size:16px;letter-spacing:-.2px}
+    #lc-shiatsu .card p{margin:0;color:rgba(11,18,32,.78);line-height:1.5;font-size:14px}
+
+    #lc-shiatsu .soft{
+      border-radius:20px;padding:16px;background:
+        radial-gradient(780px 420px at 18% 0%, rgba(146,212,193,.18), transparent 55%),
+        radial-gradient(680px 420px at 88% 30%, rgba(180,146,110,.12), transparent 55%),
+        #fff;
+      border:1px solid rgba(11,18,32,.10);
+      box-shadow:0 14px 35px rgba(11,18,32,.08);
+    }
+
+    #lc-shiatsu .bullets{margin:10px 0 0;padding:0;list-style:none;display:grid;gap:10px}
+    #lc-shiatsu .li{display:flex;gap:10px;align-items:flex-start;color:rgba(11,18,32,.78);font-size:14px;line-height:1.45}
+    #lc-shiatsu .tick{
+      width:22px;height:22px;border-radius:8px;flex:0 0 auto;margin-top:1px;
+      background:rgba(146,212,193,.18);border:1px solid rgba(146,212,193,.34);
+      display:flex;align-items:center;justify-content:center;font-weight:900;
+    }
+
+    #lc-shiatsu .quote{
+      border-radius:18px;padding:16px;background:#0b1220;color:#fff;
+      border:1px solid rgba(255,255,255,.12);
+      box-shadow:0 18px 60px rgba(0,0,0,.16);
+    }
+    #lc-shiatsu .quote p{margin:0;color:rgba(255,255,255,.88);line-height:1.5;font-size:14px}
+    #lc-shiatsu .quote .who{margin-top:10px;color:rgba(255,255,255,.72);font-size:13px}
+
+    #lc-shiatsu .ctaBand{
+      border-radius:22px;padding:16px;background:#0b1220;color:#fff;
+      border:1px solid rgba(255,255,255,.12);
+      box-shadow:0 18px 60px rgba(0,0,0,.18);
+    }
+
+    #lc-shiatsu .foot{padding:14px 0 76px;color:rgba(11,18,32,.62);font-size:12.5px;line-height:1.45}
+
+    #lc-shiatsu .sticky{
+      position:fixed;left:0;right:0;bottom:0;z-index:9999;
+      padding:10px 12px;background:rgba(11,26,32,.90);
+      backdrop-filter: blur(10px);
+      border-top:1px solid rgba(255,255,255,.10);
+    }
+    #lc-shiatsu .stickyInner{max-width:1060px;margin:0 auto;display:flex;gap:10px;flex-wrap:wrap}
+    #lc-shiatsu .sticky .btn{border-radius:14px;padding:12px 14px;font-size:14px;min-height:46px}
+    #lc-shiatsu .sticky .btnPrimary{flex:1 1 auto}
+
+    #lc-shiatsu .stickyNote{
+      max-width:1060px;margin:6px auto 0;
+      padding:0 2px;
+      color:rgba(255,255,255,.72);
+      font-size:12.5px;
+      line-height:1.35;
+    }
+
+    #lc-shiatsu .faq{display:grid;gap:10px;margin-top:10px}
+    #lc-shiatsu details.faqItem{
+      border-radius:18px;padding:14px;background:#fff;
+      border:1px solid rgba(11,18,32,.10);
+      box-shadow:0 10px 30px rgba(11,18,32,.05);
+    }
+    #lc-shiatsu details.faqItem summary{
+      cursor:pointer;font-weight:850;list-style:none;
+      display:flex;align-items:center;justify-content:space-between;gap:10px;
+    }
+    #lc-shiatsu details.faqItem summary::-webkit-details-marker{display:none}
+    #lc-shiatsu .faqA{margin-top:10px;color:rgba(11,18,32,.78);line-height:1.55;font-size:14px}
+
+    @media (min-width: 920px){
+      #lc-shiatsu .hero{padding:34px 0 26px}
+      #lc-shiatsu .grid{grid-template-columns:repeat(3,1fr)}
+      #lc-shiatsu .twoCol{display:grid;grid-template-columns:1.05fr .95fr;gap:14px}
+      #lc-shiatsu .twoCol2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    }
+  </style>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <h1>Quando il corpo si rilassa davvero,<br>spesso migliora anche il sonno.</h1>
+
+      <p class="sub">
+        Trattamento <strong>Shiatsu</strong> per tensioni corporee, stress e sonno leggero.
+        Un lavoro manuale e graduale: si parte dal corpo e si osserva cosa cambia.
+      </p>
+
+      <div class="ctaRow">
+        <a class="btn btnPrimary"
+           href="https://wa.me/393478221395?text=Ciao%20Luca%2C%20ti%20scrivo%20per%20uno%20Shiatsu.%0ACosa%20sento%3A%20%5Btensione%2Fdolore%2Fstress%2Fsonno%5D.%0ADa%20quanto%3A%20%5B...%5D.%0ADove%20lo%20sento%20nel%20corpo%3A%20%5Bcollo%2Fspalle%2Fschiena%2Faltro%5D."
+           target="_blank" rel="noopener noreferrer">
+          WhatsApp • Scrivimi
+        </a>
+
+        <a class="btn btnGhost" href="#form-alt">
+          Preferisco il form
+        </a>
+      </div>
+
+      <div class="ctaNote">
+        Scrivimi <strong>2 righe</strong>: cosa senti + da quanto.<br>
+        <strong>Ti rispondo io</strong> e capiamo se lo shiatsu è adatto nel tuo caso.
+        <div class="ctaPerm">Va bene anche se non sai bene cosa scrivere.</div>
+      </div>
+
+      <div class="micro">
+        Rispondo personalmente • su appuntamento a Solarolo (RA)
+      </div>
+
+      <div class="heroAlt">
+        Se preferisci, puoi anche usare il <a href="#form-alt">form del sito</a>.
+      </div>
+    </div>
+  </section>
+
+  <!-- SE TI RICONOSCI + BENEFICI REALISTICI -->
+  <section class="section">
+    <div class="wrap twoCol">
+      <div class="soft">
+        <h2 class="secTitle" style="margin:0 0 10px">Se ti riconosci</h2>
+        <ul class="bullets">
+          <li class="li"><span class="tick">✓</span><span>Tensioni a collo/spalle/schiena che ritornano.</span></li>
+          <li class="li"><span class="tick">✓</span><span>Mal di schiena ricorrente (lombare o dorsale) e rigidità.</span></li>
+          <li class="li"><span class="tick">✓</span><span>Stress che “resta nel corpo” anche quando ti fermi.</span></li>
+          <li class="li"><span class="tick">✓</span><span>Sonno leggero, risvegli, difficoltà a recuperare.</span></li>
+          <li class="li"><span class="tick">✓</span><span>Rigidità e stanchezza fisica persistente.</span></li>
+          <li class="li"><span class="tick">✓</span><span>Disturbi che migliorano per un po’ e poi tornano.</span></li>
+        </ul>
+        <div class="small muted" style="margin-top:10px">
+          Obiettivo: alleggerire tensioni e favorire un rilassamento più stabile nel tempo.
+        </div>
+      </div>
+
+      <div class="soft">
+        <h2 class="secTitle" style="margin:0 0 10px">Cosa puoi percepire</h2>
+        <div class="muted" style="line-height:1.55">
+          Molte persone riferiscono:
+        </div>
+        <div class="hr"></div>
+        <ul class="bullets" style="margin-top:0">
+          <li class="li"><span class="tick">✓</span><span>Alleggerimento delle tensioni corporee.</span></li>
+          <li class="li"><span class="tick">✓</span><span>Respiro più libero e sensazione di “spazio”.</span></li>
+          <li class="li"><span class="tick">✓</span><span>Rilassamento profondo.</span></li>
+          <li class="li"><span class="tick">✓</span><span>Sonno più profondo nelle ore successive (spesso).</span></li>
+        </ul>
+        <div class="small muted">
+          <strong>Nota:</strong> ogni persona reagisce in modo diverso. Non prometto risultati “standard”.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COS’È + IL TUO MODO DI LAVORARE -->
+  <section class="section">
+    <div class="wrap twoCol">
+      <div class="soft">
+        <h2 class="secTitle" style="margin:0 0 10px">Cos’è lo Shiatsu</h2>
+        <div class="muted" style="line-height:1.55">
+          Lo shiatsu è un trattamento manuale di origine giapponese che utilizza pressioni su punti e meridiani del corpo
+          per favorire rilassamento e riequilibrio energetico.
+          Ogni seduta è adattata alla persona e alla fase che sta vivendo.
+        </div>
+        <div class="hr"></div>
+        <div class="small muted">
+          <strong>Nota trasparente:</strong> non sostituisco il medico. Se hai sintomi importanti, confrontati con uno specialista.
+        </div>
+      </div>
+
+      <div class="soft">
+        <h2 class="secTitle" style="margin:0 0 10px">Come si sviluppa il lavoro</h2>
+        <div class="muted" style="line-height:1.55">
+          Molte persone iniziano con una singola seduta per una tensione o un disturbo specifico.
+          Se necessario, nel tempo il lavoro può essere integrato con altri strumenti naturali (naturopatia, principi di medicina cinese)
+          per sostenere il benessere in modo più completo.
+        </div>
+        <div class="hr"></div>
+        <div class="muted" style="line-height:1.55">
+          In molti casi, per permettere al corpo di adattarsi davvero, è utile iniziare con alcune sedute ravvicinate:
+          spesso consiglio <strong>2–3 trattamenti</strong> a distanza di circa <strong>una settimana</strong>.
+          Successivamente gli intervalli possono essere gradualmente allungati in base alle esigenze della persona.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RISULTATI REALISTICI (grid) -->
+  <section class="section">
+    <div class="wrap">
+      <h2 class="secTitle">Cosa può cambiare (in modo realistico)</h2>
+      <div class="grid">
+        <div class="card"><div class="icon">💆‍♂️</div><h3>Tensione più bassa</h3><p>Riduzione di rigidità e contratture nel tempo.</p></div>
+        <div class="card"><div class="icon">😴</div><h3>Sonno più profondo</h3><p>Maggiore capacità di “scendere” e recuperare.</p></div>
+        <div class="card"><div class="icon">🫁</div><h3>Respiro più libero</h3><p>Spesso quando il corpo si ammorbidisce, cambia anche il respiro.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIANZE (riuso) -->
+  <section class="section">
+    <div class="wrap twoCol2">
+      <div class="quote">
+        <p>“È da più di un anno che vado da Luca per i suoi trattamenti, ogni volta che ho un problema fisico o emotivo che poi si ripercuote nel mio corpo, lui sa sempre come risolverlo, avendo molte competenze in vari campi. È una persona che sa ascoltare e che tratta i suoi pazienti con grande gentilezza e rispetto”</p>
+        <div class="who">— Chiara G. (prov. Ravenna)</div>
+      </div>
+      <div class="quote">
+        <p>“Luca, operatore olistico super preparato, opera in modo individualizzato, adattando le tecniche che conosce ai bisogni della persona. Grazie Luca!”</p>
+        <div class="who">— Daniela M. (zona Faenza)</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ (ridotte e specifiche) -->
+  <section class="section" id="faq">
+    <div class="wrap">
+      <h2 class="secTitle">Domande frequenti</h2>
+
+      <div class="faq">
+        <details class="faqItem">
+          <summary>Devo iniziare per forza un percorso?</summary>
+          <div class="faqA">
+            No. Puoi iniziare anche con una singola seduta.
+            Se poi emerge che serve continuità, lo valuteremo insieme in modo graduale.
+          </div>
+        </details>
+
+        <details class="faqItem">
+          <summary>Lo shiatsu è “un massaggio”?</summary>
+          <div class="faqA">
+            È un trattamento manuale, ma non è un massaggio estetico.
+            Si lavora con pressioni su punti e meridiani per favorire rilassamento e riequilibrio.
+            L’obiettivo non è “solo” sciogliere muscoli, ma aiutare il corpo a cambiare stato.
+          </div>
+        </details>
+
+        <details class="faqItem">
+          <summary>Dove ricevi?</summary>
+          <div class="faqA">
+            Ricevo su appuntamento a Solarolo (RA).
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BAND -->
+  <section class="section" id="contatto">
+    <div class="wrap">
+      <div class="ctaBand">
+        <h2 class="secTitle" style="margin:0 0 8px">Vuoi capire se fa per te?</h2>
+        <div style="color:rgba(255,255,255,.82);line-height:1.5">
+          Scrivimi <strong>2 righe</strong>: cosa senti + da quanto. <strong>Ti rispondo io</strong> e capiamo se lo shiatsu è adatto nel tuo caso.<br>
+          <span style="color:rgba(255,255,255,.78);font-size:13px">Va bene anche se non sai bene cosa scrivere.</span>
+        </div>
+
+        <div class="ctaRow" style="margin-top:12px">
+          <a class="btn btnPrimary"
+             href="https://wa.me/393478221395?text=Ciao%20Luca%2C%20ti%20scrivo%20per%20uno%20Shiatsu.%0ACosa%20sento%3A%20%5Btensione%2Fdolore%2Fstress%2Fsonno%5D.%0ADa%20quanto%3A%20%5B...%5D.%0ADove%20lo%20sento%20nel%20corpo%3A%20%5Bcollo%2Fspalle%2Fschiena%2Faltro%5D."
+             target="_blank" rel="noopener noreferrer">
+            WhatsApp • Scrivimi
+          </a>
+        </div>
+
+        <div class="small" style="margin-top:10px;color:rgba(255,255,255,.72)">
+          Il primo messaggio non è una prenotazione. <strong>Serve solo</strong> per capire se posso esserti utile.<br>
+          Rispondo personalmente • su appuntamento a Solarolo (RA)
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORM SOLO IN FONDO -->
+  <section class="section" id="form-alt">
+    <div class="wrap">
+      <div class="soft">
+        <h2 class="secTitle" style="margin:0 0 8px">Se preferisci scrivere con calma</h2>
+        <div class="muted" style="line-height:1.55;margin-bottom:12px">
+          Puoi usare il form del sito. Lo leggerò io e ti risponderò appena possibile.
+        </div>
+        <div class="ctaRow">
+          <a class="btn btnPrimary"
+             href="https://www.lucacentolani.net/contatti"
+             target="_blank" rel="noopener noreferrer">
+            Apri il form
+          </a>
+        </div>
+        <div class="small muted" style="margin-top:10px">
+          Se ti è più semplice, WhatsApp resta l’opzione più diretta.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="foot">
+    <div class="wrap">
+      <div class="hr"></div>
+      <strong>Luca Centolani</strong> • Solarolo (RA)<br>
+      Servizi di benessere: non sono prestazioni sanitarie e non sostituiscono diagnosi o terapie mediche.
+    </div>
+  </div>
+
+  <div class="sticky" aria-label="Contatto rapido">
+    <div class="stickyInner">
+      <a class="btn btnPrimary"
+         href="https://wa.me/393478221395?text=Ciao%20Luca%2C%20ti%20scrivo%20per%20uno%20Shiatsu.%0ACosa%20sento%3A%20%5Btensione%2Fdolore%2Fstress%2Fsonno%5D.%0ADa%20quanto%3A%20%5B...%5D.%0ADove%20lo%20sento%20nel%20corpo%3A%20%5Bcollo%2Fspalle%2Fschiena%2Faltro%5D."
+         target="_blank" rel="noopener noreferrer">
+        WhatsApp • Scrivimi
+      </a>
+    </div>
+    <div class="stickyNote">
+      Scrivimi <strong>2 righe</strong>: cosa senti + da quanto. <strong>Ti rispondo io</strong>.
+      <span style="display:block;margin-top:4px;color:rgba(255,255,255,.70)">Va bene anche se non sai bene cosa scrivere.</span>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  (function () {
+    function fire(name, params) {
+      if (typeof fbq === "function") fbq("trackCustom", name, params || {});
+    }
+
+    document.addEventListener("click", function (e) {
+      var a = e.target && e.target.closest ? e.target.closest("a") : null;
+      if (!a) return;
+
+      var href = (a.getAttribute("href") || "").trim();
+      if (!href) return;
+
+      if (href.indexOf("wa.me/") !== -1) {
+        fire("WhatsApp_Click_Shiatsu", { href: href });
+      }
+
+      if (href.indexOf("lucacentolani.net/contatti") !== -1 || href.indexOf("/contatti") !== -1) {
+        fire("Contatti_Click_Shiatsu", { href: href });
+      }
+    });
+  })();
+</script>
+
+</body>
+</html>
+
