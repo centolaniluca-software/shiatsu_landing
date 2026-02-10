@@ -218,7 +218,9 @@
       </div>
 
       <div class="heroAlt">
-        Se preferisci, puoi anche usare il <a href="#form-alt">form del sito</a>.
+        Se preferisci, puoi usare il <a href="#form-alt">form del sito</a>. <br>
+        Oppure: <a href="https://www.lucacentolani.net" target="_blank" rel="noopener">Vai al sito completo</a> •
+        <a href="https://www.lucacentolani.net/shiatsu" target="_blank" rel="noopener">Pagina Shiatsu</a>
       </div>
     </div>
   </section>
@@ -283,11 +285,20 @@
           Se necessario, nel tempo il lavoro può essere integrato con altri strumenti naturali (naturopatia, principi di medicina cinese)
           per sostenere il benessere in modo più completo.
         </div>
+
         <div class="hr"></div>
+
         <div class="muted" style="line-height:1.55">
           In molti casi, per permettere al corpo di adattarsi davvero, è utile iniziare con alcune sedute ravvicinate:
           spesso consiglio <strong>2–3 trattamenti</strong> a distanza di circa <strong>una settimana</strong>.
           Successivamente gli intervalli possono essere gradualmente allungati in base alle esigenze della persona.
+        </div>
+
+        <!-- LINK verso sito (aggiunta) -->
+        <div class="small muted" style="margin-top:12px">
+          Se vuoi approfondire il mio approccio complessivo:
+          <a href="https://www.lucacentolani.net/come-lavoro" target="_blank" rel="noopener">Come lavoro</a>
+          • <a href="https://www.lucacentolani.net/shiatsu" target="_blank" rel="noopener">Pagina Shiatsu completa</a>
         </div>
       </div>
     </div>
@@ -301,6 +312,16 @@
         <div class="card"><div class="icon">💆‍♂️</div><h3>Tensione più bassa</h3><p>Riduzione di rigidità e contratture nel tempo.</p></div>
         <div class="card"><div class="icon">😴</div><h3>Sonno più profondo</h3><p>Maggiore capacità di “scendere” e recuperare.</p></div>
         <div class="card"><div class="icon">🫁</div><h3>Respiro più libero</h3><p>Spesso quando il corpo si ammorbidisce, cambia anche il respiro.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LINK prima delle testimonianze (aggiunta) -->
+  <section class="section" style="padding-top:0">
+    <div class="wrap">
+      <div class="small muted">
+        Se preferisci leggere una descrizione più completa del trattamento:
+        <a href="https://www.lucacentolani.net/shiatsu" target="_blank" rel="noopener">Pagina Shiatsu sul sito</a>
       </div>
     </div>
   </section>
@@ -325,6 +346,13 @@
       <h2 class="secTitle">Domande frequenti</h2>
 
       <div class="faq">
+        <details class="faqItem">
+          <summary>Quanto dura una seduta?</summary>
+          <div class="faqA">
+            In genere circa un’ora. Il tempo può variare leggermente in base alla persona e a come si sviluppa la seduta.
+          </div>
+        </details>
+
         <details class="faqItem">
           <summary>Devo iniziare per forza un percorso?</summary>
           <div class="faqA">
@@ -358,8 +386,7 @@
       <div class="ctaBand">
         <h2 class="secTitle" style="margin:0 0 8px">Vuoi capire se fa per te?</h2>
         <div style="color:rgba(255,255,255,.82);line-height:1.5">
-          Scrivimi <strong>2 righe</strong>: cosa senti + da quanto. <strong>Ti rispondo io</strong> e capiamo se lo shiatsu è adatto nel tuo caso.<br>
-          <span style="color:rgba(255,255,255,.78);font-size:13px">Va bene anche se non sai bene cosa scrivere.</span>
+          Scrivimi <strong>2 righe</strong>: cosa senti + da quanto. <strong>Ti rispondo io</strong> e capiamo se lo shiatsu è adatto nel tuo caso.
         </div>
 
         <div class="ctaRow" style="margin-top:12px">
@@ -392,6 +419,11 @@
              target="_blank" rel="noopener noreferrer">
             Apri il form
           </a>
+          <a class="btn btnGhost"
+             href="https://www.lucacentolani.net"
+             target="_blank" rel="noopener noreferrer">
+            Vai al sito
+          </a>
         </div>
         <div class="small muted" style="margin-top:10px">
           Se ti è più semplice, WhatsApp resta l’opzione più diretta.
@@ -418,7 +450,6 @@
     </div>
     <div class="stickyNote">
       Scrivimi <strong>2 righe</strong>: cosa senti + da quanto. <strong>Ti rispondo io</strong>.
-      <span style="display:block;margin-top:4px;color:rgba(255,255,255,.70)">Va bene anche se non sai bene cosa scrivere.</span>
     </div>
   </div>
 
@@ -443,6 +474,17 @@
 
       if (href.indexOf("lucacentolani.net/contatti") !== -1 || href.indexOf("/contatti") !== -1) {
         fire("Contatti_Click_Shiatsu", { href: href });
+      }
+
+      // (opzionale) track visite al sito / pagina shiatsu dal landing
+      if (href === "https://www.lucacentolani.net" || href === "https://www.lucacentolani.net/") {
+        fire("GoTo_Sito_From_Landing_Shiatsu", { href: href });
+      }
+      if (href === "https://www.lucacentolani.net/shiatsu") {
+        fire("GoTo_ShiatsuPage_From_Landing_Shiatsu", { href: href });
+      }
+      if (href === "https://www.lucacentolani.net/come-lavoro") {
+        fire("GoTo_ComeLavoro_From_Landing_Shiatsu", { href: href });
       }
     });
   })();
