@@ -208,17 +208,18 @@
   <!-- HERO -->
   <section class="hero">
     <div class="wrap">
-      <h1>A volte, non è solo tensione muscolare.<br>È qualcosa che il corpo sta ancora trattenendo.</h1>
+     <h1>Rigidità che torna.<br>Disturbi che si ripresentano nel tempo.</h1>
 
-      <p class="sub">
-        Shiatsu per tensioni fisiche e stati emotivi che restano bloccati nel corpo.<br>
-        Un lavoro manuale e graduale, per aiutarti a ritrovare spazio, calma e respiro.
-      </p>
+<p class="sub">
+  Shiatsu: trattamento manuale e graduale.<br>
+  Per ritrovare spazio, respiro e un ritmo più stabile.
+</p>
 
-      <div class="qualify">
-       È uno spazio in cui il corpo può rallentare davvero<br>
-       e lasciare andare quello che trattiene da tempo.
-      </div>
+<div class="qualify">
+  <strong>Trattamento singolo (60–70 min): 70€</strong><br>
+  Solarolo (RA) · solo su appuntamento.<br>
+  Se poi serve continuità, lo valutiamo insieme dopo il primo incontro.
+</div>
 
       <div class="ctaRow">
         <a class="btn btnPrimary"
@@ -227,15 +228,14 @@
           WhatsApp • Scrivimi
         </a>
 
-        <a class="btn btnGhost" href="#form-alt">
-          Preferisco il form
-        </a>
+        <div class="heroAlt">
+  Se preferisci, puoi usare il <a href="#form-alt">form del sito</a>.
+</div>
       </div>
 
       <div class="ctaNote">
         Se ti riconosci, scrivimi.<br>
         Anche solo: <strong>“mi sento sempre in tensione”</strong>.<br>
-        <strong>Ti rispondo io personalmente.</strong>
         <div class="ctaPerm">Va bene anche se non sai bene cosa scrivere.</div>
       </div>
 
@@ -469,8 +469,9 @@
       if (!href) return;
 
       if (href.indexOf("wa.me/") !== -1) {
-        fire("WhatsApp_Click_Shiatsu", { href: href });
-      }
+  fire("WhatsApp_Click_Shiatsu", { href: href });
+  fire("WhatsApp_Click", { href: href }); // evento unico per tutte le landing
+}
 
       if (href.indexOf("lucacentolani.net/contatti") !== -1 || href.indexOf("/contatti") !== -1) {
         fire("Contatti_Click_Shiatsu", { href: href });
@@ -491,6 +492,7 @@
 
 </body>
 </html>
+
 
 
 
